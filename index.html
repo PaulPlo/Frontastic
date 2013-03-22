@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Set page title -->
+	<title>Frontatic - Melon Rouge Front-End Framework</title>
+
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    
+    <div id="container">
+    
+        <header>
+            <hgroup>
+                <h1><a href="#" title="Home">Frontastic</a></h1>
+                <h2>Melon Rouge Front-End Framework</h2>
+            </hgroup>
+        </header>
+        
+        <ul class="top-nav sticky" data-magellan-expedition>
+            <li data-magellan-arrival='ui-components'><a href="#ui-components">UI Components</a></li>
+            <li data-magellan-arrival='jquery'><a href="#jquery">jQuery Plugins</a></li>
+        </ul>
+        
+        <div id="content">
+            
+            <section id="ui-components" data-magellan-destination='ui-components'> 
+                
+                <h3>UI Components</h3>        
+                
+            </section>
+            
+            <section id="jquery" data-magellan-destination='jquery'>
+            
+                <h3>Jquery Plugins</h3>
+            
+                <article>
+                    
+                    <h4>Slideshow Bob Plugin</h4>
+                    <p>Touch, responsive, smooth images carousel</p>
+                    
+                    <div id="demo-slideshow" class="slideshow">
+            
+                        <div class="slide">
+                            <div class="slide-desc">
+                                <p>Donec consectetur aliquet magna, sed luctus nisi sagittis vitae. Integer et tempor tortor. Nullam eu lacus et massa ornare dignissim in eu ante</p>
+                            </div>
+                            <img src="img/cat1.jpg"/>
+                        </div>
+                        
+                        <div class="slide">
+                            <div class="slide-desc">
+                                <p>ellentesque eget purus ante. Duis leo libero, viverra a tincidunt vel, accumsan ut enim. Etiam rhoncus nulla</p>
+                            </div>
+                            <img src="img/cat2.jpg"/>
+                        </div>
+                        
+                        <div class="slide">
+                            <div class="slide-desc">
+                                <p> Quisque sodales fermentum nulla non molestie. Donec lorem ante, porttitor sed commodo non, ornare non metus. </p>
+                            </div>
+                            <img src="img/cat3.jpg"/>
+                        </div>
+                        
+                        <div class="controls">
+                            <span class="prev"><i class="icon-left-open"></i></span>
+                            <span class="next"><i class="icon-right-open"></i></span>
+                        </div>
+                        
+                    </div>
+                </article>
+                
+                <article>
+                    <h4>Sticky Nav</h4>
+                    <p>A simple plugin to stick anything, anywhere</p>
+                    
+                    <p>The horizontal nav of this website is a demo of the sticky plugin. Just add the class "sticky" at the element you want to fix.</p>
+                </article>
+                
+            </section>
+            
+        </div> <!-- End of content -->
+    
+    </div> <!-- End of container -->
+    
+    <footer>
+        <p>Designed & Developped by <a href="www.melonrouge.asia">Melon Rouge Agency</a></p>
+    </footer>
+    
+    </div> <!-- End of container -->
+   
+    
+    <!-- Our Javascript-->
+    <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/plugins/jquery.foundation.magellan.js"></script>
+    <script src="js/plugins/jquery.moveScroll.js"></script>
+    <script src="js/plugins/jquery.sticky.js"></script>
+    <script src="js/plugins/jquery.slideshowBob.js"></script>
+    
+</body>
+
+</html>

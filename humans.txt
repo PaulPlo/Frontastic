@@ -1,0 +1,12 @@
+
+/* TEAM */
+
+Company : Melon Rouge Agency
+Design : Paul Manem
+Development : Paul Cravayat
+Location : Phnom Penh, Cambodia
+
+/* SITE */
+
+Standards: HTML5, CSS3
+Components: Normalize, jQuery, Breakpoint, Magellan

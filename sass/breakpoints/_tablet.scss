@@ -1,0 +1,64 @@
+/////////////////////////////
+@include breakpoint(9) {
+////////////////////////////
+	
+	body {
+		background-color: $color-body;}
+
+	#container {
+		@include single-box-shadow();
+		background-color: $color-container;
+		border-left: $color-container-border 10px solid;
+		border-right: $color-container-border 10px solid;}
+		
+	#content {
+		width:fluid(9);}
+		
+	.slideshow {
+		.slide {
+			width: fixed(9);}
+		.slide-desc {
+			width: fixed(4);}
+		img {
+			width: fixed(5);}
+	}
+};
+
+/////////////////////////////
+@include breakpoint(12) {
+////////////////////////////
+
+	.top-nav {
+		width: fixed(12, false);
+		background-color: white;
+		li {
+			text-align: center ;
+			width: fixed(2, false);
+			padding: 0 $grid-gutter 0 0 ;}
+	}
+	
+	.slideshow {
+		.slide {
+			width:fixed(10);
+			padding : 0 fixed(1);}
+		.slide-desc {
+			width: fixed(4);}
+		img {
+			width: fixed(6);}
+		.controls {
+			bottom: 5%;
+			position: absolute;
+			width: fixed(12, false);
+			.prev, .next {
+				padding: 0;}
+			.prev {
+				float: left;}
+			.next {
+				float: right;}
+		}
+	}
+	
+	#content {
+		width:fluid(12);}
+
+};

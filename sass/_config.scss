@@ -1,0 +1,56 @@
+// ==========================================================================
+// normalize config (uncomment variables to activate reset sections)
+// ==========================================================================
+
+$normalize-html5: true;
+$normalize-base: true;
+
+// $normalize-links: true;
+// $normalize-typography: true;
+// $normalize-lists: true;
+// $normalize-embedded: true;
+// $normalize-forms: true;
+// $normalize-tables: true;
+
+// other resets
+// ==========================================================================
+
+// $print-styles: true;
+
+// Grid Variables
+// =============================================================================
+
+$grid-column: 60px;
+$grid-gutter: 20px;
+$grid-overlay: true; // generate visual grid overlay
+$grid-lines: true; // generate horizontal lines for vertical align
+$ie-support: false; // fallback breakpoint
+$base-font-size: 16px;
+
+// Path to server's static files directory
+// Do not use a trailing slash
+// ==========================================================================
+$static-path: '/static';
+
+// ==========================================================================
+// project specific variables and mixins
+// ==========================================================================
+
+$gray: #555555; 
+$red: #71161D;
+$turquoise: #5A9A70;
+$corail: #E86946;
+$orange: #EF9D54;
+
+$color-body: $gray;
+$color-container: #FFF;
+$color-title: $red;
+$color-link: $turquoise;
+$color-container-border: $red;
+
+h1 {color: $color-title; }
+h2 {color: $color-title; }
+h3 {color: $color-title; }
+h4 {color: $color-title; }
+h5 {color: $color-title; }
+h6 {color: $color-title; }

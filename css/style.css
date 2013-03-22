@@ -1,0 +1,814 @@
+/* Breakpoint - v2.1.1 - 2012-12-12
+* https://github.com/lesjames/Breakpoint
+* Copyright (c) 2012 @lesjames; Licensed MIT */
+/* line 51, ../sass/_config.scss */
+h1 {
+  color: #71161d;
+}
+
+/* line 52, ../sass/_config.scss */
+h2 {
+  color: #71161d;
+}
+
+/* line 53, ../sass/_config.scss */
+h3 {
+  color: #71161d;
+}
+
+/* line 54, ../sass/_config.scss */
+h4 {
+  color: #71161d;
+}
+
+/* line 55, ../sass/_config.scss */
+h5 {
+  color: #71161d;
+}
+
+/* line 56, ../sass/_config.scss */
+h6 {
+  color: #71161d;
+}
+
+/* line 16, ../sass/framework/_mixins.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 15, ../sass/framework/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+}
+/* line 15, ../sass/framework/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* normalize.css v1.0.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 34, ../sass/framework/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+/* line 42, ../sass/framework/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 52, ../sass/framework/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 63, ../sass/framework/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+ * and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+/* line 74, ../sass/framework/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 91, ../sass/framework/_normalize.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+/* line 106, ../sass/framework/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE 6/7.
+ */
+/* line 114, ../sass/framework/_normalize.scss */
+body {
+  margin: 0;
+}
+
+@media (min-width: 0px) {
+  /* line 24, ../sass/framework/_grid-helpers.scss */
+  body::before {
+    content: 'mobile';
+    display: none;
+  }
+}
+/* line 124, ../sass/framework/_grid-helpers.scss */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: -webkit-gradient(linear, 0% 50%, 80 50%, color-stop(25%, transparent), color-stop(25%, rgba(255, 0, 0, 0.1)), color-stop(100%, rgba(255, 0, 0, 0.1)));
+  background: -webkit-linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+  background: -moz-linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+  background: -o-linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+  background: linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+  left: 0;
+  right: 20px;
+  -webkit-background-size: 25%;
+  -moz-background-size: 25%;
+  -o-background-size: 25%;
+  background-size: 25%;
+}
+
+/* Grid based on https://github.com/necolas/griddle by Nicolas Gallagher (@necolas) */
+/* line 7, ../sass/framework/_grid-core.scss */
+body {
+  font-size: 16px;
+}
+
+/* line 11, ../sass/framework/_grid-core.scss */
+.wrapper, #container, footer {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+}
+
+/* line 19, ../sass/framework/_grid-core.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 20, ../sass/framework/_grid-core.scss */
+.no-js .responsive-image {
+  display: none;
+}
+
+/* line 25, ../sass/framework/_grid-core.scss */
+.grid, .slide {
+  display: block;
+  padding: 0;
+  margin: 0 -0.625em;
+  text-align: left;
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+}
+
+/* line 44, ../sass/framework/_grid-core.scss */
+.grid > .grid, .slide > .grid, .grid > .slide, .slide > .slide {
+  overflow: hidden;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* line 54, ../sass/framework/_grid-core.scss */
+.grid-cell, .slide .slide-desc, .slide img {
+  width: 100%;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 0.625em;
+  /* controls vertical positioning of units */
+  vertical-align: top;
+  /* keeps unit content correctly aligned */
+  text-align: left;
+  /* reset text defaults */
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+}
+/* line 11, ../sass/framework/_mixins.scss */
+.lt-ie8 .grid-cell, .lt-ie8 .slide .slide-desc, .slide .lt-ie8 .slide-desc, .lt-ie8 .slide img, .slide .lt-ie8 img {
+  behavior: url(/static/js/boxsizing.htc);
+}
+
+/* line 74, ../sass/framework/_grid-core.scss */
+.grid-center {
+  text-align: center;
+}
+
+/* line 82, ../sass/framework/_grid-core.scss */
+.grid-cell-center {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 61, ../../../../../Program Files/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%;
+}
+
+/* line 64, ../../../../../Program Files/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* line 3, ../sass/framework/_typography.scss */
+h1 {
+  margin-top: 0.75em;
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+/* line 8, ../sass/framework/_typography.scss */
+h2 {
+  margin-top: 1em;
+  line-height: 2em;
+  margin-bottom: 1em;
+}
+
+/* line 13, ../sass/framework/_typography.scss */
+h3 {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  margin-top: 1.33333em;
+  line-height: 2.66667em;
+  margin-bottom: 1.33333em;
+}
+
+/* line 19, ../sass/framework/_typography.scss */
+h4 {
+  margin-top: 1.5em;
+  line-height: 3em;
+  margin-bottom: 1.5em;
+}
+
+/* line 24, ../sass/framework/_typography.scss */
+p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* line 28, ../sass/framework/_typography.scss */
+ul {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* Fix for vertical rhythm bold problem */
+/* line 33, ../sass/framework/_typography.scss */
+b, strong {
+  line-height: 0em;
+}
+
+/* line 36, ../sass/framework/_typography.scss */
+a, a:visited {
+  color: #5a9a70;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot");
+  src: url("../fonts/fontello.eot?#iefix") format("embedded-opentype"), url("../fonts/fontello.woff") format("woff"), url("../fonts/fontello.ttf") format("truetype"), url("../fonts/fontello.svg#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 9, ../sass/framework/_fontello.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  opacity: 0.8;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - magrins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 31, ../sass/framework/_fontello.scss */
+.icon-gplus:before {
+  content: '\2b';
+}
+
+/* '+' */
+/* line 32, ../sass/framework/_fontello.scss */
+.icon-pinterest:before {
+  content: '\31';
+}
+
+/* '1' */
+/* line 33, ../sass/framework/_fontello.scss */
+.icon-linkedin:before {
+  content: '\4c';
+}
+
+/* 'L' */
+/* line 34, ../sass/framework/_fontello.scss */
+.icon-rss:before {
+  content: '\52';
+}
+
+/* 'R' */
+/* line 35, ../sass/framework/_fontello.scss */
+.icon-twitter:before {
+  content: '\54';
+}
+
+/* 'T' */
+/* line 36, ../sass/framework/_fontello.scss */
+.icon-youtube:before {
+  content: '\55';
+}
+
+/* 'U' */
+/* line 37, ../sass/framework/_fontello.scss */
+.icon-facebook:before {
+  content: '\66';
+}
+
+/* 'f' */
+/* line 38, ../sass/framework/_fontello.scss */
+.icon-wordpress-1:before {
+  content: '\77';
+}
+
+/* 'w' */
+/* line 39, ../sass/framework/_fontello.scss */
+.icon-left:before {
+  content: '\2190';
+}
+
+/* '←' */
+/* line 40, ../sass/framework/_fontello.scss */
+.icon-up:before {
+  content: '\2191';
+}
+
+/* '↑' */
+/* line 41, ../sass/framework/_fontello.scss */
+.icon-right:before {
+  content: '\2192';
+}
+
+/* '→' */
+/* line 42, ../sass/framework/_fontello.scss */
+.icon-down:before {
+  content: '\2193';
+}
+
+/* '↓' */
+/* line 43, ../sass/framework/_fontello.scss */
+.icon-mail:before {
+  content: '\2709';
+}
+
+/* '✉' */
+/* line 44, ../sass/framework/_fontello.scss */
+.icon-left-open:before {
+  content: '\e75d';
+}
+
+/* '' */
+/* line 45, ../sass/framework/_fontello.scss */
+.icon-right-open:before {
+  content: '\e75e';
+}
+
+/* '' */
+/* line 46, ../sass/framework/_fontello.scss */
+.icon-menu:before {
+  content: '\f0c9';
+}
+
+/* '' */
+/* line 47, ../sass/framework/_fontello.scss */
+.icon-mail-alt:before {
+  content: '\f0e0';
+}
+
+/* '' */
+/* line 48, ../sass/framework/_fontello.scss */
+.icon-wordpress:before {
+  content: '\f31d';
+}
+
+/* '' */
+/* line 2, ../sass/framework/_fontello-ie7.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  /* fix buttons height */
+  line-height: 1em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+}
+
+/* line 12, ../sass/framework/_fontello-ie7.scss */
+.icon-gplus {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2b;&nbsp;');
+}
+
+/* line 13, ../sass/framework/_fontello-ie7.scss */
+.icon-pinterest {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x31;&nbsp;');
+}
+
+/* line 14, ../sass/framework/_fontello-ie7.scss */
+.icon-linkedin {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4c;&nbsp;');
+}
+
+/* line 15, ../sass/framework/_fontello-ie7.scss */
+.icon-rss {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x52;&nbsp;');
+}
+
+/* line 16, ../sass/framework/_fontello-ie7.scss */
+.icon-twitter {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x54;&nbsp;');
+}
+
+/* line 17, ../sass/framework/_fontello-ie7.scss */
+.icon-youtube {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x55;&nbsp;');
+}
+
+/* line 18, ../sass/framework/_fontello-ie7.scss */
+.icon-facebook {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x66;&nbsp;');
+}
+
+/* line 19, ../sass/framework/_fontello-ie7.scss */
+.icon-wordpress-1 {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x77;&nbsp;');
+}
+
+/* line 20, ../sass/framework/_fontello-ie7.scss */
+.icon-left {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2190;&nbsp;');
+}
+
+/* line 21, ../sass/framework/_fontello-ie7.scss */
+.icon-up {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2191;&nbsp;');
+}
+
+/* line 22, ../sass/framework/_fontello-ie7.scss */
+.icon-right {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2192;&nbsp;');
+}
+
+/* line 23, ../sass/framework/_fontello-ie7.scss */
+.icon-down {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2193;&nbsp;');
+}
+
+/* line 24, ../sass/framework/_fontello-ie7.scss */
+.icon-mail {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2709;&nbsp;');
+}
+
+/* line 25, ../sass/framework/_fontello-ie7.scss */
+.icon-left-open {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe75d;&nbsp;');
+}
+
+/* line 26, ../sass/framework/_fontello-ie7.scss */
+.icon-right-open {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe75e;&nbsp;');
+}
+
+/* line 27, ../sass/framework/_fontello-ie7.scss */
+.icon-menu {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0c9;&nbsp;');
+}
+
+/* line 28, ../sass/framework/_fontello-ie7.scss */
+.icon-mail-alt {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0e0;&nbsp;');
+}
+
+/* line 29, ../sass/framework/_fontello-ie7.scss */
+.icon-wordpress {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf31d;&nbsp;');
+}
+
+/* line 12, ../sass/_components.scss */
+.slideshow .controls {
+  color: #5a9a70;
+  text-align: center;
+}
+/* line 15, ../sass/_components.scss */
+.slideshow .controls .next, .slideshow .controls .prev {
+  cursor: pointer;
+  padding: 0 2em;
+  font-size: 1.875em;
+  line-height: 1.6em;
+}
+/* line 21, ../sass/_components.scss */
+.slideshow .pills {
+  text-align: center;
+  padding-left: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+/* line 26, ../sass/_components.scss */
+.slideshow .pills li {
+  height: 12px;
+  width: 12px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #5a9a70;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 1em;
+}
+/* line 34, ../sass/_components.scss */
+.slideshow .pills li.active {
+  background-color: #71161d;
+}
+/* line 36, ../sass/_components.scss */
+.slideshow .pills li:last-child {
+  margin-right: 0;
+}
+
+/* line 7, ../sass/_global.scss */
+#container {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, #000000), color-stop(5%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: -moz-linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: -o-linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  -webkit-background-size: 100% 24px;
+  -moz-background-size: 100% 24px;
+  -o-background-size: 100% 24px;
+  background-size: 100% 24px;
+  background-position: left top;
+}
+
+/* line 13, ../sass/_global.scss */
+header {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.125em;
+  padding-bottom: 1.375em;
+}
+
+/* line 20, ../sass/_global.scss */
+.top-nav {
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  *zoom: 1;
+  padding-top: 1.5em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.125em;
+  padding-bottom: 1.375em;
+}
+/* line 15, ../sass/framework/_mixins.scss */
+.top-nav:before, .top-nav:after {
+  display: table;
+  content: "";
+}
+/* line 15, ../sass/framework/_mixins.scss */
+.top-nav:after {
+  clear: both;
+}
+/* line 25, ../sass/_global.scss */
+.top-nav li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../../Program Files/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.top-nav li:first-child, .top-nav li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../Program Files/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.top-nav li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../Program Files/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.top-nav li.last {
+  padding-right: 0;
+}
+
+/* line 30, ../sass/_global.scss */
+footer {
+  text-align: center;
+}
+
+@media (min-width: 46.25em) {
+  /* line 124, ../sass/framework/_grid-helpers.scss */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: -webkit-gradient(linear, 0% 50%, 80 50%, color-stop(25%, transparent), color-stop(25%, rgba(255, 0, 0, 0.1)), color-stop(100%, rgba(255, 0, 0, 0.1)));
+    background: -webkit-linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+    background: -moz-linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+    background: -o-linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+    background: linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+    left: 50%;
+    width: 46.25em;
+    margin-left: -23.125em;
+    -webkit-background-size: 80px;
+    -moz-background-size: 80px;
+    -o-background-size: 80px;
+    background-size: 80px;
+  }
+
+  /* line 116, ../sass/framework/_grid-helpers.scss */
+  .wrapper, #container, footer {
+    width: 43.75em;
+  }
+
+  /* line 5, ../sass/breakpoints/_tablet.scss */
+  body {
+    background-color: #555555;
+  }
+
+  /* line 8, ../sass/breakpoints/_tablet.scss */
+  #container {
+    -webkit-box-shadow: 0px 0px 5px #333333;
+    -moz-box-shadow: 0px 0px 5px #333333;
+    box-shadow: 0px 0px 5px #333333;
+    background-color: white;
+    border-left: #71161d 10px solid;
+    border-right: #71161d 10px solid;
+  }
+
+  /* line 14, ../sass/breakpoints/_tablet.scss */
+  #content {
+    width: 100%;
+  }
+
+  /* line 18, ../sass/breakpoints/_tablet.scss */
+  .slideshow .slide {
+    width: 45em;
+  }
+  /* line 20, ../sass/breakpoints/_tablet.scss */
+  .slideshow .slide-desc {
+    width: 20em;
+  }
+  /* line 22, ../sass/breakpoints/_tablet.scss */
+  .slideshow img {
+    width: 25em;
+  }
+}
+@media (min-width: 61.25em) {
+  /* line 124, ../sass/framework/_grid-helpers.scss */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: -webkit-gradient(linear, 0% 50%, 80 50%, color-stop(25%, transparent), color-stop(25%, rgba(255, 0, 0, 0.1)), color-stop(100%, rgba(255, 0, 0, 0.1)));
+    background: -webkit-linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+    background: -moz-linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+    background: -o-linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+    background: linear-gradient(left, transparent 20px, rgba(255, 0, 0, 0.1) 20px, rgba(255, 0, 0, 0.1) 80px);
+    left: 50%;
+    width: 61.25em;
+    margin-left: -30.625em;
+    -webkit-background-size: 80px;
+    -moz-background-size: 80px;
+    -o-background-size: 80px;
+    background-size: 80px;
+  }
+
+  /* line 116, ../sass/framework/_grid-helpers.scss */
+  .wrapper, #container, footer {
+    width: 58.75em;
+  }
+
+  /* line 31, ../sass/breakpoints/_tablet.scss */
+  .top-nav {
+    width: 58.75em;
+    background-color: white;
+  }
+  /* line 34, ../sass/breakpoints/_tablet.scss */
+  .top-nav li {
+    text-align: center;
+    width: 8.75em;
+    padding: 0 20px 0 0;
+  }
+
+  /* line 41, ../sass/breakpoints/_tablet.scss */
+  .slideshow .slide {
+    width: 50em;
+    padding: 0 5em;
+  }
+  /* line 44, ../sass/breakpoints/_tablet.scss */
+  .slideshow .slide-desc {
+    width: 20em;
+  }
+  /* line 46, ../sass/breakpoints/_tablet.scss */
+  .slideshow img {
+    width: 30em;
+  }
+  /* line 48, ../sass/breakpoints/_tablet.scss */
+  .slideshow .controls {
+    bottom: 5%;
+    position: absolute;
+    width: 58.75em;
+  }
+  /* line 52, ../sass/breakpoints/_tablet.scss */
+  .slideshow .controls .prev, .slideshow .controls .next {
+    padding: 0;
+  }
+  /* line 54, ../sass/breakpoints/_tablet.scss */
+  .slideshow .controls .prev {
+    float: left;
+  }
+  /* line 56, ../sass/breakpoints/_tablet.scss */
+  .slideshow .controls .next {
+    float: right;
+  }
+
+  /* line 61, ../sass/breakpoints/_tablet.scss */
+  #content {
+    width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+// Structure
+// =============================================================================
+
+#container, footer {
+	@extend .wrapper;}
+	
+.slide {
+	
+	@extend .grid;
+	
+	.slide-desc, img {
+		@extend .grid-cell;}
+}
+
