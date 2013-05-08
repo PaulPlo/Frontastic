@@ -1,114 +1,54 @@
 ﻿<!DOCTYPE html>
-
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8" />
-
+	
+    <meta charset="utf-8" />
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    
 	<!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Set page title -->
-	<title>Frontatic - Melon Rouge Front-End Framework</title>
+	<title>Frontatic - template 101</title>
 
 	<!-- Included CSS Files -->
 	<link rel="stylesheet" href="css/style.css">
-    
+
 </head>
 
 <body>
+    <!-- Message for IE6 or older -->
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
     
-    <div id="container">
+    <!-- container for the grid overlay. don't forget to remove it when going live -->
+    <div class="grid-overlay"></div> 
     
-        <header>
-            <hgroup>
-                <h1><a href="#" title="Home">Frontastic</a></h1>
-                <h2>Melon Rouge Front-End Framework</h2>
-            </hgroup>
-        </header>
-        
-        <ul class="top-nav sticky" data-magellan-expedition>
-            <li data-magellan-arrival='ui-components'><a href="#ui-components">UI Components</a></li>
-            <li data-magellan-arrival='jquery'><a href="#jquery">jQuery Plugins</a></li>
-        </ul>
-        
-        <div id="content">
-            
-            <section id="ui-components" data-magellan-destination='ui-components'> 
-                
-                <h3>UI Components</h3>        
-                
-            </section>
-            
-            <section id="jquery" data-magellan-destination='jquery'>
-            
-                <h3>Jquery Plugins</h3>
-            
-                <article>
-                    
-                    <h4>Slideshow Bob Plugin</h4>
-                    <p>Touch, responsive, smooth images carousel</p>
-                    
-                    <div id="demo-slideshow" class="slideshow">
-            
-                        <div class="slide">
-                            <div class="slide-desc">
-                                <p>Donec consectetur aliquet magna, sed luctus nisi sagittis vitae. Integer et tempor tortor. Nullam eu lacus et massa ornare dignissim in eu ante</p>
-                            </div>
-                            <img src="img/cat1.jpg"/>
-                        </div>
-                        
-                        <div class="slide">
-                            <div class="slide-desc">
-                                <p>ellentesque eget purus ante. Duis leo libero, viverra a tincidunt vel, accumsan ut enim. Etiam rhoncus nulla</p>
-                            </div>
-                            <img src="img/cat2.jpg"/>
-                        </div>
-                        
-                        <div class="slide">
-                            <div class="slide-desc">
-                                <p> Quisque sodales fermentum nulla non molestie. Donec lorem ante, porttitor sed commodo non, ornare non metus. </p>
-                            </div>
-                            <img src="img/cat3.jpg"/>
-                        </div>
-                        
-                        <div class="controls">
-                            <span class="prev"><i class="icon-left-open"></i></span>
-                            <span class="next"><i class="icon-right-open"></i></span>
-                        </div>
-                        
-                    </div>
-                </article>
-                
-                <article>
-                    <h4>Sticky Nav</h4>
-                    <p>A simple plugin to stick anything, anywhere</p>
-                    
-                    <p>The horizontal nav of this website is a demo of the sticky plugin. Just add the class "sticky" at the element you want to fix.</p>
-                </article>
-                
-            </section>
-            
-        </div> <!-- End of content -->
+    <!-- Start coding here ! -->
     
-    </div> <!-- End of container -->
+    <!-- jQuery library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <!-- Frontastic jQuery plugins -->
+    <script src="js/plugins/vendor/jquery.transit.min.js"></script>
+    <script src="js/plugins/jquery.frontastic.slideshowBob.min.js"></script>
+    <script src="js/plugins/jquery.frontastic.sticky.js"></script>
+    <script src="js/plugins/jquery.frontastic.moveScroll.js"></script>
     
-    <footer>
-        <p>Designed & Developped by <a href="www.melonrouge.asia">Melon Rouge Agency</a></p>
-    </footer>
-    
-    </div> <!-- End of container -->
-   
-    
-    <!-- Our Javascript-->
-    <script src="js/jquery.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/plugins/jquery.foundation.magellan.js"></script>
-    <script src="js/plugins/jquery.moveScroll.js"></script>
-    <script src="js/plugins/jquery.sticky.js"></script>
-    <script src="js/plugins/jquery.slideshowBob.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src='//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
     
 </body>
 

@@ -88,7 +88,7 @@
                 // Set new size
                 resizeSlideShow() ;
                 // Show current slide
-                $element.children('.slideshow-inner').css('marginLeft',slideWidth*(-currentPosition))
+                scrollSlide(0);
             }) ; 
             
             // Auto start
@@ -105,7 +105,7 @@
         
         slideshow.start = function() {
             intervalId = setInterval(function(){
-                $element.find('.controls > .next').click() ; 
+                $element.find('.controls').find('.next').click() ; 
             }, slideshow.settings.interval) ; 
         }
         
@@ -140,18 +140,18 @@
             slidesMargin = $(slides).outerWidth() - $(slides).outerWidth(true) ;
             // set the width of all .slide to the width of the .slideshow container
             if(slidesMargin < 0) { // no negatives margins 
-                $(slides).css('max-width', slideWidth);
+                $(slides).css('width', slideWidth);
                 // Set the slideshow wrapper width equal to total width of all slides
                 $element.find('.slideshow-inner').css('width', slideWidth * nbSlides); 
             } else { // If negatives margins, add it to slides width (useful for our framelessGrid framework)
-                $(slides).css('max-width', slideWidth+slidesMargin);
+                $(slides).css('width', slideWidth+slidesMargin);
                 $element.find('.slideshow-inner').css('width', (slideWidth+slidesMargin) * nbSlides); 
             }
         }  ;
         
         // hasControl : tells if this slideshow has a controls bloc or not
         var hasControl = function() {
-            if($element.find('.controls').length != 0 && $element.find('.controls > .next').length != 0 && $element.find('.controls > .prev').length != 0) {
+            if($element.find('.controls').length != 0 && $element.find('.controls').find('.next').length != 0 && $element.find('.controls').find('.prev').length != 0) {
                 return true ; 
             }
             return false ; 
@@ -160,7 +160,7 @@
         // bind controls : bind click event on next and prev
         var bindControls = function() {
             
-            $element.find('.controls > span').bind('click.slideshowbob', function(){
+            $element.find('.controls').find('span').bind('click.slideshowbob', function(){
             
                 if(currentPosition == slides.length-1 && $(this).hasClass('next')) {                   
                     //move the first slide after last slide
@@ -277,11 +277,14 @@
             }
             else if ( phase =="end" ) {
                 if(direction == 'left') {
-                    updateCurrentPosition('next') ; 
+                    updateCurrentPosition('next') ;
+                    if(slideNumber < slides.length-1) slideNumber++ ; else slideNumber = 0 ; 
                 } else if(direction == 'right') {
                     updateCurrentPosition('prev') ;
+                    if(slideNumber > 0 ) slideNumber-- ; else slideNumber = slides.length-1 ; 
                 }
                 scrollSlide() ; 
+                updatePills() ; 
             }
         } ; 
 
@@ -301,7 +304,12 @@
             
             if(duration == null) duration = slideshow.settings.speed ; 
             
-            if(Modernizr.csstransitions) {
+            var distance = slideWidth * currentPosition ;
+            var value = (distance<0 ? "" : "-") + Math.abs(distance).toString(); //inverse the number we set in the css
+            
+            $element.children('.slideshow-inner').transition({x:value}) ; 
+            
+            /*if(Modernizr.csstransitions) {
 
                 var distance = slideWidth * currentPosition ; 
 
@@ -316,7 +324,7 @@
                 $element.children('.slideshow-inner').animate({
                     'marginLeft' : slideWidth*(-currentPosition)
                 }, slideshow.settings.speed);
-            }
+            }*/
         }
         
         var fadeSlide = function() {

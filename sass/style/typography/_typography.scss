@@ -1,0 +1,38 @@
+
+@include establish-baseline;
+
+/* header titles (for changing modular-scale ratio, see modular-scale.scss) */
+$base-h1-size : modular-scale(3);
+$base-h2-size : modular-scale(2);
+$base-h3-size : modular-scale(1);
+
+h1 {
+	@include adjust-font-size-to($base-h1-size);
+	@include margin-leader(1,$base-h1-size);
+	@include margin-trailer(1,$base-h1-size); }
+h2 {
+	@include adjust-font-size-to($base-h2-size);
+	@include margin-leader(1,$base-h2-size);
+	@include margin-trailer(1,$base-h2-size);}
+h3 {
+	@include adjust-font-size-to($base-h3-size);
+	@include margin-leader(1,$base-h3-size);
+	@include margin-trailer(1,$base-h3-size); }
+h4, h5, h6 {
+	@include adjust-font-size-to($base-font-size) ; 
+	@include margin-leader(1);
+	@include margin-trailer(1);}
+
+/* other block elements */
+p, ul, ol, dl, blockquote, form {
+	@include margin-leader(1);
+	@include margin-trailer(1); }
+
+/* blockquote */
+blockquote {
+	border-left: 3px solid transparentize(black, 0.9);
+	padding-left:1em;}
+
+/* Fix for inline elements vertical rhythm */
+b, strong, small, em, abbr, label {
+	@include adjust-leading-to(0);}

@@ -3,7 +3,7 @@
 
 // Defaults
 $ratio: golden_ratio() !default;
-$base-size: 16px !default;
+$base-size: $base-font-size !default;
 $round-pixels: true !default;
 
 // Modular Scale function

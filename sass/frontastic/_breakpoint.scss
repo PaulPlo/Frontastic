@@ -1,0 +1,16 @@
+// Grid Variables
+// ==========================================================================
+
+$grid-direction: left !default;
+
+// generate visual grid overlay on class .grid-overlay
+$grid-overlay: false !default;
+
+// fallback breakpoint (column count for < IE9)
+$ie-support: false !default;
+
+// label for your mobile first breakpoint
+$breakpoint-list: 'mobile' !default;
+
+@import 'core';
+@import 'grid';
